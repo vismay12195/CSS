@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> WD - CSS and CSS3 - Full stack Assignment_Q&A </title>
+    <style>
+        * {
+            margin: 0.5%;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 1em;
+            font-weight: 500;
+            background: #e8ecf0 url(https://www.csszengarden.com/220/i/denim2.png) repeat;
+            color: #182e4f;
+        }
+    </style>
+</head>
+
+<!-- Assignment Question-1 -->
+<p>
+<h2> What are the benefits of using CSS? </h2>
+</p>
+<p>CSS, Cascading Style Sheets define the presentation of the document that is written in the HTML. This
+    document is
+    delivered to the user, whether shown on a computer screen, on a cell phone, printed on paper or read aloud
+    by a
+    screen reader.</p>
+<p>There are several benefits of using the style sheets.</p>
+<ul>
+    <li>
+        <strong> Precise type and layout controls:</strong>CSS provides print-like precision.
+    </li>
+    <li>
+        <strong>Less work:</strong> Changing the appearance of an entire website is possible by editing one style
+        sheet which ensures the consistency of formatting throughout the site.
+    </li>
+    <li><strong>More accessible sites:</strong> When every aspect of presentation is handled by CSS, we can mark up
+        the conent more meaningfully which makes it more accessible for non-visual or mobile devices.</li>
+    <li><strong>Better or faster data-driven websites:</strong>CSS improves the page loading speed. The code density
+        on the website contributes to its speed. The larger the code, the slower the website's loading. Only a few
+        code lines are required to make changes to a large number of pages on a website with CSS which helps
+        in<b>Page Speed Optimization</b>
+    </li>
+</ul><br>
+
+<!-- Assignment Question-2 -->
+<p>
+<h2>What are the disadvantages of CSS?</h2>
+</p>
+<p>There really are not many disadvantages to using style sheets. There are some lingering hassles from browser
+    inconsistencies, but they can either be avoided or worked around.</p>
+<p>Here are few disadvantages that could be kept in mind while working with CSS;</p>
+<ul>
+    <li><strong>Cross browser issues:</strong>CSS works differently on different browser. Due to that, implementing
+        the initial CSS changes on a website would be accessible on developer's end, however, it is very imperative
+        to confirm the compatibility on all the browsers.</li>
+    <li><strong>Confusion due to its many levels:</strong>different versions of the CSS such as CSS, CSS2, CSS3 can
+        be confusing for users.</li>
+    <li><strong>Fixing HTML tags:</strong>It is often necessary to fix not only one CSS file but also HTML tags
+        associated with particular CSS selectors. It significantly increases the editing and testing time as well.
+    </li>
+    <li><strong>Different layout display:</strong>If the browser is outdated then CSS data may be interpreted
+        differently.</li>
+    <li><strong>Vulnerability:</strong>CSS is easily accessible because of its open text-based system. An accident
+        or a mere act of mischief with files can end up disrupting the display and formatting of entire website.
+    </li>
+</ul><br>
+
+<!-- Assignment Question-3 -->
+<p>
+<h2>What is the difference between CSS2 and CSS3?</h2>
+</p>
+<table border="5" width="900" cellspacing="0" height="450"
+    style="background-color: lightseagreen;color: #fff; font-weight: 700;border-radius: 4px;border-color: lightpink;">
+    <tr style="text-align: center;">
+        <td>
+            <h3>CSS2</h3>
+        </td>
+        <td>
+            <h3>CSS3</h3>
+        </td>
+    </tr>
+    <tr>
+        <td>1. CSS2 has browser extension issues.</td>
+        <td>1. CSS3 has complete support for almost all recent web browsers.</td>
+    </tr>
+    <tr>
+        <td>2. CSS2 has limited styling and some old design features.</td>
+        <td>2. CSS3 has all the latest styling properties as well as an addition of <b>animation</b> property as
+            well.
+        </td>
+    </tr>
+    <tr>
+        <td>3. CSS2 does not have compatibility with external font styles through google fonts and typecast.</td>
+        <td>3. CSS3 does have compatibility with external font styles through google fonts and typecast. </td>
+    </tr>
+    <tr>
+        <td>4. CSS2 had only few simple selectors. </td>
+        <td>4. CSS3 has increased amount of selectors.</td>
+    </tr>
+    <tr>
+        <td>5. CSS2 did not have provision to specifically design the web layout.</td>
+        <td>5. CSS3 has grid system and template layout module. It is helping in creating layout according to user
+            components.</td>
+    </tr>
+    <tr>
+        <td>6. CSS2 was all in a single document with limited features.</td>
+        <td>6. CSS3 is split into various documents known as modules. The modularisation helped in working on a
+            particular specification and faster evolution.</td>
+    </tr>
+    <tr>
+        <td>7. CSS2 was not supporting responsive web design.</td>
+        <td>7. CSS3 supports responsive design in such a manner that it looks good on all screen sizes.</td>
+    </tr>
+</table><br>
+
+<!-- Assignment Question-4 -->
+<p>
+<h2>Name a few CSS style components.</h2>
+</p>
+<p>
+    Below are the CSS style components which acts as the root to applying styling to HTML elements.
+</p>
+<ol>
+    <li><strong><ins>Selector:</ins></strong>
+        <ul>
+            <li>
+                This is the first part of a CSS rule which encapsulates the set of elements to which the rule
+                applies.
+            </li>
+            <li>
+                Typically, this will be an ID selector-<b>#element-id</b>,a Class selector-<b>.class-name</b>,an
+                Element selector-<b>div/section/p/img/....</b>,or something more complex involving hierarchy or
+                location-<b>:first-child/::before/::after</b>perhaps.
+            </li>
+        </ul>
+    </li>
+    <p>Next, enclosed within a pair of curly braces, comes the<b>rule-set.</b>This is one or more rules which
+        apply a particular style to the element(s) matched by the selector.</p>
+    <li><strong><ins>Property:</ins></strong>
+        <ul>
+            <li>
+                Propert is the style, such as margin, padding, or one of the many other stylable properties.
+            </li>
+        </ul>
+    </li>
+    <li><strong><ins>Value:</ins></strong>
+        <ul>
+            <li>
+                The<b>value</b>is the value to set in pair of the property such as margin, or padding, that may be
+                unit-ed value like 15px, 10%, 1em or some other CSS- compatible value like a color name, a keyword,
+                such as<b>right</b>for float.
+            </li>
+        </ul>
+    </li>
+</ol>
+<p><ins>For ex.:</ins></p>
+<p style="color: rgba(210, 93, 194,1);padding-left: 4.5%;">
+    p&lcub;<br>&emsp;color: red;<br>&emsp;position: relative;<br>&emsp;text-align: center;<br>&rcub;
+</p>
+<p> Here in the example,<b>p</b>is selector, following style rules will be applied to all the paragraphs of the
+    content.</p>
+<p><b>color</b>is property and its value is<b>red,</b></p>
+<p><b>position</b>is another property and its value is<b>relative,</b></p>
+<p><b>text-align</b>is another property with value of<b>center.</b></p><br>
+
+<!-- Assignment Question-5 -->
+<p>
+<h2>What do you understand by CSS opacity?</h2>
+</p>
+<p>The<b>Opacity</b>setting applies to the entire element-both the foreground and the background. The by-default
+    value of opacity is set to 1.</p>
+<p>The value for opacity is a number between 0(completely transparent) and 1(completely opaque). As opacity applies
+    to the entire element but if there is a need of affecting just one, use an<b>RGBa or HSLa</b>color value
+    instead. </p>
+<p><ins>For ex.:</ins></p>
+<ol>
+    <li> When<strong>Opacity=0.25</strong>
+        <p style="color: rgba(210, 93, 194,1);">&lt;div<b>style="width:25%; height:auto; background-color: #2b537a;
+                margin-left: 5%;"&gt;</b></p>
+        <p style="color: rgba(210, 93, 194,1);">&lt;h1<b>style="color: gold; background: white; opacity:
+                0.25;"&gt;</b>Playing with
+            opacity &lt;&frasl;h1&gt;</p>
+        &emsp;<div style="width:25%; height:auto; background-color:#2b537a;margin-left: 5%;">
+            <h1 style="color: gold; background: white; opacity: 0.25;">Playing with opacity</h1>
+        </div>
+    </li>
+    <li> When<strong>Opacity=0.5</strong>
+        <p style="color: rgba(210, 93, 194,1);">&lt;div<b>style="width:25%; height:auto; background-color: #2b537a;
+                margin-left: 5%;"&gt;</b></p>
+        <p style="color: rgba(210, 93, 194,1);">&lt;h1<b>style="color: gold; background: white; opacity:
+                0.5;"&gt;</b>Playing with
+            opacity &lt;&frasl;h1&gt;</p>
+        &emsp;<div style="width:25%; height:auto; background-color:#2b537a;margin-left: 5%;">
+            <h1 style="color: gold; background: white; opacity: 0.5;">Playing with opacity</h1>
+        </div>
+    </li>
+    <li> When<strong>Opacity=1</strong>
+        <p style="color: rgba(210, 93, 194,1);">&lt;div<b>style="width:25%; height:auto; background-color: #2b537a;
+                margin-left: 5%;"&gt;</b></p>
+        <p style="color: rgba(210, 93, 194,1);">&lt;h1<b>style="color: gold; background: white; opacity:
+                1;"&gt;</b>Playing with
+            opacity &lt;&frasl;h1&gt;</p>
+        &emsp;<div style="width:25%; height:auto; background-color:#2b537a;margin-left: 5%;">
+            <h1 style="color: gold; background: white; opacity: 1;">Playing with opacity</h1>
+        </div>
+    </li>
+</ol><br>
+
+<!-- Assignment Question-6 -->
+<p>
+<h2>How can the background color of an element be changed?</h2>
+</p>
+<p>The<b>background-color:</b>property is used to specify the background color of the element. The by-default value
+    of background-color property is set to<b>transparent</b>. In addition to that, it accepts<b>color values(name or
+        numeric).</b></p>
+<p>In order for coloring the background of whole page, we apply the background-color property to the body element.
+    This is considered as one of the important exemption. </p>
+<p><ins>For ex.:</ins></p>
+<p>In the example below, I have used the<b>color and background-color</b>properties to highlight a word marked as a
+    "glossary" class.</p>
+<p style="color: rgba(210, 93, 194,1);padding-left: 4.5%;">
+    .glossary&lcub;<br>&emsp;color: #fff;<br>&emsp;background-color:#2b537a;<br>&rcub;
+</p>
+<p style="color: rgba(210, 93, 194,1);padding-left: 4.5%;">
+    &lt;p style="margin-left-5%;"&gt;Every variety of apple had their origin in Kashmir(&lt;dfn class="glossary"
+    style="color: #fff; background-color: #2b537a;"&gt;&lt;i&gt;Red
+    Apple&lt;&frasl;i&gt;&lt;&frasl;dfn&gt;)&lt;&frasl;p&gt;
+</p><br>
+<p style="margin-left: 5%;">Every variety of apple had their origin in Kashmir(<dfn class="glossary"
+        style="color:#fff;background-color: #2b537a;"><i>Red Apple</i></dfn>)</p><br>
+
+<!-- Assignment Question-7 -->
+<p>
+<h2>How can image repetition of the background be controlled?</h2>
+</p>
+<p>We can control the image repetition of the background by using the<b>background-repeat:</b>property. The
+    by-default value of background-repeat property is set to<b>repeat</b>. In addition to that, it also accepts
+    other values such as<b>no-repeat|repeat-x|repeat-y|space|round.</b></p>
+<p><ins>For ex.:</ins></p>
+<ol>
+    <li>
+        If there is a need of repeating the background-image just once, we can use the<b>no-repeat</b>as a value:
+        <br>
+        <p style="color: rgba(210, 93, 194,1);padding-left: 4.5%;">
+            div&lcub;<br>&emsp;width: 30%;<br>&emsp;height: 150px;<br>&emsp;background-color:
+            #fff;<br>&emsp;background-image:
+            url(https://images.pexels.com/photos/1445416/pexels-photo-1445416.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);<br>&emsp;background-size:
+            20%;<br>&emsp;background-repeat: no-repeat;<br>&emsp;margin-left: 5%;<br>&rcub;
+        </p>
+
+        <div
+            style="width: 30%;height: 150px;background-image: url(https://images.pexels.com/photos/1445416/pexels-photo-1445416.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1); background-color: #fff; background-size: 20%; background-repeat: no-repeat; margin-left: 5%;">
+        </div>
+    </li>
+
+    <li>
+        If there is a need of repeating the background-image, we can use the<b>repeat</b>as a value:
+        <br>
+        <p style="color: rgba(210, 93, 194,1);padding-left: 4.5%;">
+            div&lcub;<br>&emsp;width: 30%;<br>&emsp;height: 150px;<br>&emsp;background-color:
+            #fff;<br>&emsp;background-image:
+            url(https://images.pexels.com/photos/1445416/pexels-photo-1445416.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);<br>&emsp;background-size:
+            20%;<br>&emsp;background-repeat: repeat;<br>&emsp;margin-left: 5%;<br>&rcub;
+        </p>
+
+        <div
+            style="width: 30%;height: 150px;background-image: url(https://images.pexels.com/photos/1445416/pexels-photo-1445416.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1); background-color: #fff; background-size: 20%; background-repeat: repeat; margin-left: 5%;">
+        </div>
+    </li>
+
+    <li>
+        If there is a need of repeating the background-image only horizontally, we can use the<b>repeat-x</b>as a
+        value:
+        <br>
+        <p style="color: rgba(210, 93, 194,1);padding-left: 4.5%;">
+            div&lcub;<br>&emsp;width: 30%;<br>&emsp;height: 150px;<br>&emsp;background-color:
+            #fff;<br>&emsp;background-image:
+            url(https://images.pexels.com/photos/1445416/pexels-photo-1445416.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);<br>&emsp;background-size:
+            20%;<br>&emsp;background-repeat: repeat-x;<br>&emsp;margin-left: 5%;<br>&rcub;
+        </p>
+
+        <div
+            style="width: 30%;height: 150px;background-image: url(https://images.pexels.com/photos/1445416/pexels-photo-1445416.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1); background-color: #fff; background-size: 20%; background-repeat: repeat-x; margin-left: 5%;">
+        </div>
+    </li>
+
+    <li>
+        If there is a need of repeating the background-image only vertically, we can use the<b>repeat-y</b>as a
+        value:
+        <br>
+        <p style="color: rgba(210, 93, 194,1);padding-left: 4.5%;">
+            div&lcub;<br>&emsp;width: 30%;<br>&emsp;height: 150px;<br>&emsp;background-color:
+            #fff;<br>&emsp;background-image:
+            url(https://images.pexels.com/photos/1445416/pexels-photo-1445416.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);<br>&emsp;background-size:
+            20%;<br>&emsp;background-repeat: repeat-y;<br>&emsp;margin-left: 5%;<br>&rcub;
+        </p>
+
+        <div
+            style="width: 30%;height: 150px;background-image: url(https://images.pexels.com/photos/1445416/pexels-photo-1445416.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1); background-color: #fff; background-size: 20%; background-repeat: repeat-y; margin-left: 5%;">
+        </div>
+    </li>
+
+    <li>
+        When background-repeat is set to<b>space,</b>the browser calculates how many background images can fit
+        across the
+        width and height of the background area, then adds equal amounts of space between each image. The result is
+        even rows and columns and no clipped images,then we can use the<b>space</b>as a value:
+        <br>
+        <p style="color: rgba(210, 93, 194,1);padding-left: 4.5%;">
+            div&lcub;<br>&emsp;width: 30%;<br>&emsp;height: 150px;<br>&emsp;background-color:
+            #fff;<br>&emsp;background-image:
+            url(https://images.pexels.com/photos/1445416/pexels-photo-1445416.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);<br>&emsp;background-size:
+            20%;<br>&emsp;background-repeat: space;<br>&emsp;margin-left: 5%;<br>&rcub;
+        </p>
+
+        <div
+            style="width: 30%;height: 150px;background-image: url(https://images.pexels.com/photos/1445416/pexels-photo-1445416.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1); background-color: #fff; background-size: 20%; background-repeat: space; margin-left: 5%;">
+        </div>
+    </li>
+
+    <li>
+        When background-repeat is set to<b>round,</b>it makes the browser squish the background image horizontally
+        and
+        vertically (not necessarily proportionally) to fit in the background area an even number of times, then we
+        can use the<b>round</b>as a value:
+        <br>
+        <p style="color: rgba(210, 93, 194,1);padding-left: 4.5%;">
+            div&lcub;<br>&emsp;width: 30%;<br>&emsp;height: 150px;<br>&emsp;background-color:
+            #fff;<br>&emsp;background-image:
+            url(https://images.pexels.com/photos/1445416/pexels-photo-1445416.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);<br>&emsp;background-size:
+            20%;<br>&emsp;background-repeat: round;<br>&emsp;margin-left: 5%;<br>&rcub;
+        </p>
+
+        <div
+            style="width: 30%;height: 150px;background-image: url(https://images.pexels.com/photos/1445416/pexels-photo-1445416.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1); background-color: #fff; background-size: 20%; background-repeat: round; margin-left: 5%;">
+        </div>
+    </li>
+</ol><br>
+
+<!-- Assignment Question-8 -->
+<p>
+<h2>What is the use of background-position property?</h2>
+</p>
+<p> The<b>background-position</b>property specifies the position of the origin image in the background. Origin image
+    is the image that is placed as the first image in the background. The by-default value
+    of background-position property is set to<b>0% 0%(Same as left top)</b>. In addition to that, it
+    accepts<b>length measurements(in px or em)|percentage(%)|left|center|right|top|bottom.</b></p>
+<p>To position the origin image provide the horizontal and vertical values that describe where to place it.</p>
+<p><ins>For ex.:</ins></p>
+<ol>
+    <li>
+        <b>Method 1:</b>Keyword Positioning
+        <p> The Keyword values<b>left, right, top, bottom and center</b>position the origin image relative to the
+            element's outer edge. Here, I have used the values<b>left bottom</b>in first image and<b>right
+                center</b>in the second image to explain further.</p>
+        <p style="color: rgba(210, 93, 194,1);padding-left: 4.5%;">
+            div&lcub;<br>&emsp;width: 30%;<br>&emsp;height: 150px;<br>&emsp;background-color:
+            #fff;<br>&emsp;background-image:
+            url(https://images.pexels.com/photos/1445416/pexels-photo-1445416.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);<br>&emsp;background-size:
+            20%;<br>&emsp;background-repeat: no-repeat;<br>&emsp;background-position: left
+            bottom;<br>&emsp;margin-left: 5%;<br>&rcub;
+        </p>
+
+        <div
+            style="width: 30%;height: 150px;background-image: url(https://images.pexels.com/photos/1445416/pexels-photo-1445416.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1); background-color: #fff; background-size: 20%; background-repeat: no-repeat; background-position: left bottom; margin-left: 5%;">
+        </div>
+
+        <p style="color: rgba(210, 93, 194,1);padding-left: 4.5%;">
+            div&lcub;<br>&emsp;width: 30%;<br>&emsp;height: 150px;<br>&emsp;background-color:
+            #fff;<br>&emsp;background-image:
+            url(https://images.pexels.com/photos/1445416/pexels-photo-1445416.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);<br>&emsp;background-size:
+            20%;<br>&emsp;background-repeat: no-repeat;<br>&emsp;background-position: right
+            center;<br>&emsp;margin-left: 5%;<br>&rcub;
+        </p>
+
+        <div
+            style="width: 30%;height: 150px;background-image: url(https://images.pexels.com/photos/1445416/pexels-photo-1445416.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1); background-color: #fff; background-size: 20%; background-repeat: no-repeat; background-position: right center; margin-left: 5%;">
+        </div>
+        <p><strong>NOTE:</strong>If we provide only one keyword, then the missing keyword is assumed to
+            be<b>center.</b></p>
+    </li>
+
+    <li>
+        <b>Method 2:</b>Length Measurements(in px or em)
+        <p> Specifying position using length measurements in pixels or ems indicates an amount of offset from the
+            top-left corner of the element to the top-left corner of the background origin image. </p>
+        <p>When providing the length values,<b>the horizontal measurements always goes first.</b>Negative values
+            are also allowed but it will make the image to hang outside the background-area. Here, I have used the
+            values<b>100px 50px</b>and it will position the image 100px from the left edge and 50px down from the
+            top edge of the element. The second image is using the negative values.</p>
+        <p style="color: rgba(210, 93, 194,1);padding-left: 4.5%;">
+            div&lcub;<br>&emsp;width: 30%;<br>&emsp;height: 150px;<br>&emsp;background-color:
+            #fff;<br>&emsp;background-image:
+            url(https://images.pexels.com/photos/1445416/pexels-photo-1445416.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);<br>&emsp;background-size:
+            20%;<br>&emsp;background-repeat: no-repeat;<br>&emsp;background-position: 100px
+            50px;<br>&emsp;margin-left: 5%;<br>&rcub;
+        </p>
+
+        <div
+            style="width: 30%;height: 150px;background-image: url(https://images.pexels.com/photos/1445416/pexels-photo-1445416.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1); background-color: #fff; background-size: 20%; background-repeat: no-repeat; background-position: 100px 50px; margin-left: 5%;">
+        </div>
+
+        <p style="color: rgba(210, 93, 194,1);padding-left: 4.5%;">
+            div&lcub;<br>&emsp;width: 30%;<br>&emsp;height: 150px;<br>&emsp;background-color:
+            #fff;<br>&emsp;background-image:
+            url(https://images.pexels.com/photos/1445416/pexels-photo-1445416.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);<br>&emsp;background-size:
+            20%;<br>&emsp;background-repeat: no-repeat;<br>&emsp;background-position: -25px
+            -15px;<br>&emsp;margin-left: 5%;<br>&rcub;
+        </p>
+
+        <div
+            style="width: 30%;height: 150px;background-image: url(https://images.pexels.com/photos/1445416/pexels-photo-1445416.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1); background-color: #fff; background-size: 20%; background-repeat: no-repeat; background-position: -25px -15px; margin-left: 5%;">
+        </div>
+    </li>
+
+    <li>
+        <b>Method 3:</b>Percentages
+        <p> Specifying percentage position using horizontal/vertical pairs, with<b>0% 0%</b>corresponding to the
+            top-left corner and<b>100% 100%</b>corresponding to the bottom-right corner.</p>
+        <p>It is important to note that<b>the percentage value applies to both the background area and image
+                itself.</b>A horizontal value of 25% positions the point 25% from the left edge of the image at a
+            point that is 25% from the left edge of the background positioning area. A vertical value of 100%
+            positions the bottom edge of the image at the bottom edge of the positioning area.</p>
+        <p style="color: rgba(210, 93, 194,1);padding-left: 4.5%;">
+            div&lcub;<br>&emsp;width: 30%;<br>&emsp;height: 150px;<br>&emsp;background-color:
+            #fff;<br>&emsp;background-image:
+            url(https://images.pexels.com/photos/1445416/pexels-photo-1445416.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);<br>&emsp;background-size:
+            20%;<br>&emsp;background-repeat: no-repeat;<br>&emsp;background-position: 25%
+            100%;<br>&emsp;margin-left: 5%;<br>&rcub;
+        </p>
+
+        <div
+            style="width: 30%;height: 150px;background-image: url(https://images.pexels.com/photos/1445416/pexels-photo-1445416.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1); background-color: #fff; background-size: 20%; background-repeat: no-repeat; background-position: 25% 100%; margin-left: 5%;">
+        </div>
+        <p><strong>NOTE:</strong>If we provide only one percentage, then the other is assumed to be<b>50%
+                (centered)</b></p>
+    </li>
+</ol>&nbsp;
+
+<!-- Assignment Question-9 -->
+<p>
+<h2>Which property controls the image scroll in the background?</h2>
+</p>
+<p>The<b>background-attachment:</b>property control the image scroll in the background. It gives the choice of
+    whether the background image scrolls with the content or stays in a fixed position.</p>
+<p>When an image is<b>fixed,</b>it stays in the same position relative to the viewport of the browser. The
+    by-default value of background-attachment property is set to<b>Scroll</b>. In addition to that, it
+    accepts<b>fixed|local.</b></p>
+<p><ins>For ex.:</ins></p>
+<p>In the example below, I have used the<b>background-attachment</b>property with a value of<b>fixed</b>and it would
+    make the image stay fixed as in the background of the viewport and the written content will scroll up over it.
+</p>
+<p style="color: rgba(210, 93, 194,1);padding-left: 4.5%;">
+    div&lcub;<br>&emsp;width: 70%;<br>&emsp;height: 500px;<br>&emsp;background-color:
+    #fff;<br>&emsp;background-image:
+    url(https://images.pexels.com/photos/1445416/pexels-photo-1445416.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);<br>&emsp;color:
+    rgb(221,219,97);<br>&emsp;font-weight: 900;<br>&emsp;font-family: monospace;<br>&emsp;font-size:
+    x-large;<br>&emsp;background-size: 80%;<br>&emsp;background-repeat: no-repeat;<br>&emsp;background-position:
+    center;<br>&emsp;background-attachment: fixed;<br>&emsp;margin-left: 5%;<br>&rcub;
+</p>
+
+<div
+    style="width: 70%;height: 500px;background-image: url(https://images.pexels.com/photos/1445416/pexels-photo-1445416.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1); color: rgb(221, 219, 97);font-weight: 900;font-family: monospace;font-size: x-large; background-color: #fff; background-size: 90%; background-repeat: no-repeat; background-position: center;background-attachment: fixed; margin-left: 5%;">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem corporis amet, quam alias assumenda
+    distinctio? Vel iusto id facilis voluptates quisquam eius accusamus voluptate suscipit veniam iure, aliquam
+    natus nulla illum officiis, a tempore minima rerum saepe ratione omnis vitae. Consequatur, deserunt amet,
+    sed, reiciendis quidem quis ea maxime minus eaque officiis non. Corrupti, voluptate unde? Excepturi in, esse
+    minima, consequatur id ipsam amet odio itaque necessitatibus suscipit dolorem! Soluta ratione ut illum corrupti
+    dicta nam deserunt aperiam enim error consectetur neque, mollitia nobis. Sed nobis rem asperiores id saepe
+    nesciunt repellendus perferendis quisquam, nam aliquid culpa enim, quae inventore! Lorem ipsum dolor sit amet
+    consectetur adipisicing elit. Pariatur quisquam dolor ad non aperiam adipisci aut sit est sunt eaque,
+    perferendis natus laudantium doloribus alias saepe aspernatur earum qui quo molestias similique dolores quaerat
+    cupiditate?
+</div>
+
+<p style="color: rgba(210, 93, 194,1);padding-left: 4.5%;">
+    div&lcub;<br>&emsp;width: 70%;<br>&emsp;height: 500px;<br>&emsp;background-color:
+    #fff;<br>&emsp;background-image:
+    url(https://images.pexels.com/photos/1445416/pexels-photo-1445416.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);<br>&emsp;color:
+    rgb(221,219,97);<br>&emsp;font-weight: 900;<br>&emsp;font-family: monospace;<br>&emsp;font-size:
+    x-large;<br>&emsp;background-size: 80%;<br>&emsp;background-repeat: no-repeat;<br>&emsp;background-position:
+    center;<br>&emsp;background-attachment: scroll;<br>&emsp;margin-left: 5%;<br>&rcub;
+</p>
+
+<div
+    style="width: 70%;height: 500px;background-image: url(https://images.pexels.com/photos/1445416/pexels-photo-1445416.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1); color: rgb(221, 219, 97);font-weight: 900;font-family: monospace;font-size: x-large; background-color: #fff; background-size: 90%; background-repeat: no-repeat; background-position: center;background-attachment: scroll; margin-left: 5%;">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem corporis amet, quam alias assumenda
+    distinctio? Vel iusto id facilis voluptates quisquam eius accusamus voluptate suscipit veniam iure, aliquam
+    natus nulla illum officiis, a tempore minima rerum saepe ratione omnis vitae. Consequatur, deserunt amet,
+    sed, reiciendis quidem quis ea maxime minus eaque officiis non. Corrupti, voluptate unde? Excepturi in, esse
+    minima, consequatur id ipsam amet odio itaque necessitatibus suscipit dolorem! Soluta ratione ut illum corrupti
+    dicta nam deserunt aperiam enim error consectetur neque, mollitia nobis. Sed nobis rem asperiores id saepe
+    nesciunt repellendus perferendis quisquam, nam aliquid culpa enim, quae inventore! Lorem ipsum dolor sit amet
+    consectetur adipisicing elit. Pariatur quisquam dolor ad non aperiam adipisci aut sit est sunt eaque,
+    perferendis natus laudantium doloribus alias saepe aspernatur earum qui quo molestias similique dolores quaerat
+    cupiditate?
+</div><br>
+
+<!-- Assignment Question-10 -->
+<p>
+<h2>Why should background and color be used as separate properties?</h2>
+</p>
+<p>Background and color are separate properties because they can be used for different purposes. The background property
+    is used to set the background color or image of an element, while the color property is used to set the text color
+    of that element. These properties can be used together to create a cohesive design, but they can also be used
+    separately to create different effects. For example, you might want to set a background color for an element but
+    leave the text color as the default.</p>
+<p> The<b>color</b>property only specifies the foreground color which only applies to the text and border.</p>
+<p>The<b>background</b>property is a Shorthand property to specify all of the background styles in one declaration.</p>
+<p><ins>For ex.:</ins></p>
+<p style="color: rgba(210, 93, 194,1);padding-left: 4.5%;">
+    div&lcub;<br>&emsp;width: 70%;<br>&emsp;height: 500px;<br>&emsp;background: white
+    url(https://images.pexels.com/photos/1445416/pexels-photo-1445416.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)
+    repeat-x center center fixed;<br>&emsp;(<dfn style="color: cornflowerblue"><i>background: background-color
+            background-image
+            background-repeat background-position background-attachment background-clip background-origin;</i></dfn>)
+    Shorthand
+    Property<br>&emsp;background-size: 20%; <br>&emsp;color: rgb(221, 219, 97);<br>&rcub;
+</p>
+<div
+    style="width:100%;height:650px; background: white url(https://images.pexels.com/photos/1445416/pexels-photo-1445416.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1) repeat-x center center fixed; background-size: 20%;color:rgb(221, 219, 97)">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam hic exercitationem odit unde molestiae. Sapiente
+    libero et excepturi. Neque illo odit ipsam. Sapiente enim eaque deleniti natus et laborum totam. Earum eligendi ipsa
+    harum, mollitia praesentium quaerat laudantium consequuntur ea?Lorem ipsum dolor sit amet consectetur adipisicing
+    elit. Fugiat qui a porro consequatur nobis laboriosam, earum blanditiis repellat nisi? Consectetur aperiam
+    consequatur soluta autem corporis itaque nulla tempora doloribus, explicabo repellat repellendus rem a placeat culpa
+    fugit magnam praesentium, iure neque incidunt? Quasi illo natus sunt corrupti officia soluta obcaecati deserunt
+    asperiores atque. Ad vero quasi explicabo harum repellendus. Facere error eum rerum sed tempora, aliquam vero
+    nesciunt rem id sunt nemo autem deserunt minus, similique, quas quo veritatis perspiciatis. Illo aliquid aspernatur
+    voluptatibus suscipit, quae quos consequuntur. Ullam ipsa, tempora tempore illo dolor ratione porro voluptatum in
+    nulla vel. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem consequatur rem, voluptates voluptas
+    tempora, id voluptatum illum corporis officiis nulla non earum hic. Vel est nostrum aspernatur illum nesciunt.
+    Labore dolor veritatis nihil similique aut numquam maxime, ut recusandae a rerum iusto animi nisi repudiandae culpa
+    corporis, harum inventore sunt illo amet provident hic repellendus excepturi dignissimos sequi? Molestiae neque
+    officia nostrum quibusdam laborum explicabo soluta consectetur porro iure est voluptatum esse omnis sapiente culpa
+    voluptate iste, dolores corrupti cupiditate consequatur tempora inventore perferendis illum! Consectetur, eveniet a
+    libero blanditiis excepturi ab facilis consequuntur fugit at temporibus iure. Natus cum nihil nostrum aut quae
+    impedit non saepe, neque laudantium omnis aliquam ab beatae fuga magni, cupiditate reiciendis minima, repellat nemo.
+</div><br>
+
+<!-- Assignment Question-11 -->
+<p>
+<h2>How to center block elements using CSS1?</h2>
+</p>
+<p>We can center the block elements by setting the margin to<b>auto</b>on the left, right, top and bottom sides of a
+    sized block
+    element and it has the effect of centering the element in its container(body)</p>
+<p><ins>For ex.:</ins></p>
+<p style="color: rgba(210, 93, 194,1);padding-left: 4.5%;">
+    div&lcub;<br>&emsp;width: 25%;<br>&emsp;height: auto;<br>&emsp;background-color: white;<br>&emsp;marging:
+    auto;<br>&rcub;
+</p>
+<p style="color: rgba(210, 93, 194,1);padding-left: 4.5%;">
+    h1&lcub;<br>&emsp;color: gold;<br>&emsp;background: white;<br>&emsp;opacity: 1;<br>&rcub;
+</p>
+<div style="width:25%; height:auto; background-color:#2b537a;margin: auto;">
+    <h1 style="color: gold; background: white; opacity: 1;">Playing with opacity</h1>
+</div><br>
+
+<!-- Assignment Question-12 -->
+<p>
+<h2>How to maintain the CSS specifications?</h2>
+</p>
+<p>The CSS specifications are maintained by the World Wide Web Consortium (W3C). Even though every browser supports CSS,
+    there are many inconsistencies in the supported specification version. Some browsers even have their own
+    implementation of the specification and have proprietary (vendor) prefixes. Supporting all modern browsers is a
+    daunting task, not to mention when developers need to support old and legacy browsers. All these problems cause a
+    lot of trouble for developers, and it is hard for them to write CSS code that will render consistently across all
+    browsers.</p>
+<p>A CSS declaration is made up of a selector, or a group of selectors, and a declaration block. Inside of the
+    declaration block, there are declarations with properties and values. The order of those declarations may seem
+    unimportant at first glance, but defining an order does hold some advantages. Grouping is considered to be a good
+    choice because it makes sense to write the positioning-related declarations first as some elements could be removed
+    from the flow. The browser digests it first, and the developer can read the block with ease knowing where the
+    element will be positioned right away. Preferred order of styles is as below:</p>
+<ol>
+    <li>Positioning</li>
+    <li>Box model</li>
+    <li>Typographic</li>
+    <li>Visual</li>
+</ol>
+<p>In addition to that,<i>Media Queries</i>is an enhancement of the @media rules of CSS and the "media" attribute in
+    HTML. It adds parameters such as size of display, color depth and aspect ratio. This is because within a class of
+    media there can still be important variations. for ex.: minimum or maximum screen size, resolution. This is also
+    used in accordance with CSS in order to maintain its specifications.</p><br>
+
+<!-- Assignment Question-13 -->
+<p>
+<h2>What are the ways to integrate CSS as a web page?</h2>
+</p>
+<p>There are mainly three ways to integrate CSS into a web page.</p>
+<ol start="a">
+    <li><b>Inline:</b></li> HTML elements have CSS applied to them via<strong
+        style="color: rgba(210, 93, 194,1);">style</strong>attribute.
+    <p><ins>For ex.:</ins></p>
+    <p style="color: rgba(210, 93, 194,1);padding-left: 4%;">
+        &emsp;&lt;p style="color: cornflowerblue"&gt; Hello Web Page &lt;&frasl;p&gt;
+    </p>
+    <p style="color:cornflowerblue;margin-left: 5%;"> Hello Web Page</p>
+    <li><b>Embedded/Internal:</b></li> By placing the CSS declarations in a<strong
+        style="color: rgba(210, 93, 194,1);">&lt;style&gt;</strong>within the &lt;head&gt; element.
+    <p><ins>For ex.:</ins></p>
+    <p style="color: rgba(210, 93, 194,1);padding-left: 4%;">
+        &emsp;&lt;style&gt;<br>&emsp;p&lcub;color: cornflowerblue;&rcub;<br>&emsp;&lt;&frasl;style&gt;
+    </p>
+    <li><b>External/Linked/Imported:</b></li> Place the CSS in an external file and link it via a<strong
+        style="color: rgba(210, 93, 194,1);">&lt;link&gt;</strong>attribute.
+    <p><ins>For ex.:</ins></p>
+    <p style="color:rgba(210, 93, 194,1);padding-left: 4.5%;">&lt;link rel="stylesheet" href="style.css"&gt;</p>
+</ol><br>
+
+<!-- Assignment Question-14 -->
+<p>
+<h2>What is embedded style sheets?</h2>
+</p>
+<p>An Embedded style sheet is a CSS style specification method used within HTML. We can embed the entire stylesheet in
+    an HTML document by using the &lt;style&gt; element.</p>
+<p>There are couple of advantages of Embedded style sheets as explained below:</p>
+<ul>
+    <li>We can create classes for use on multiple tag types in the document.</li>
+    <li>We can use the selector and grouping methods to apply styles in complex situations.</li>
+    <li>No extra download is required to import the information.</li>
+</ul><br>
+
+<!-- Assignment Question-15 -->
+<p>
+<h2>What are the exxternal style sheets?</h2>
+</p>
+<p>External style sheets are by far the most powerful way to use CSS because you
+    can make style changes across an entire site simply by editing a single style
+    sheet document. That is the advantage to having all the style information in
+    one place, and not mixed in with the document source.
+    Furthermore, because a single style document is downloaded and cached
+    by the browser for the whole site, there is less code to download with every
+    document, resulting in better performance.</p>
+<p>An external style sheet is a plain-text document with at least one style sheet rule. It may not include
+    any HTML tags. The style sheet should be named with the .css suffix.</p>
+<p>There are two ways to apply an external style sheet: the link element and an
+    @import rule.</p><br>
+
+<!-- Assignment Question-16 -->
+<p>
+<h2>What are the advantages and disadvantages of using external style sheets?</h2>
+</p>
+<p>An external style sheet is a separate file that contains all of the style rules for a website, while an internal
+    style sheet is embedded within the HTML file.</p>
+<p>Advantages of using an external style sheet include:</p>
+<ul>
+    <li><b>Ease of maintenance:</b>With an external style sheet, you can make changes to the style rules in one file
+        and
+        have
+        those changes apply to multiple pages on your website. This can save time and make it easier to keep your
+        website
+        consistent.</li>
+    <li><b>Faster page loading:</b>Because the style rules are stored in a separate file, the browser can cache that
+        file and load
+        it more quickly when a user visits multiple pages on your site.</li>
+    <li><b>Easier collaboration:</b>If multiple people are working on your website, an external style sheet can make
+        it
+        easier to
+        collaborate and avoid conflicts.</li>
+</ul>
+<p>Disadvantages of using an external style sheet include:</p>
+<ul>
+    <li><b>Additional HTTP request:</b>Using an external style sheet means that the browser has to make an
+        additional
+        HTTP request to retrieve that file, which can slow down page loading times slightly.</li>
+    <li><b>Dependency on the file:</b>If the external style sheet file is deleted or moved, your website's styling
+        will
+        be affected.</li>
+    <li><b>Less flexibility:</b>With an internal style sheet, you can target specific elements on a page using
+        inline
+        styles. This
+        is not possible with an external style sheet.</li>
+</ul><br>
+
+<!-- Assignment Question-17 -->
+<p>
+<h2>What is the meaning of CSS Selector?</h2>
+</p>
+<p><b>CSS selectors</b>are used to select the content you want to style. Selectors are the part of CSS rule set. CSS
+    selectors select HTML elements according to its id, class, type, attribute etc.</p>
+<p>There are several different types of selectors in CSS.</p>
+<ol>
+    <li><b>CSS Element Selctor:</b>The element selector selects the HTML element by name.</li>
+    <p><ins>For ex.:</ins></p>
+    <p style="color: rgba(210, 93, 194,1);padding-left: 4%;">
+        p&lcub;<br>&emsp;text-align: center;<br>&emsp;color: cornflowerblue;<br>&rcub;
+    </p>
+    <li><b>CSS ID Selector:</b>The id selector selects the id attribute of an HTML element to select a specific
+        element.
+        An id is always unique within the page so it is chosen to select a single, unique element. It is written
+        with the hash character (#), followed by the id of the element.</li>
+    <p><ins>For ex.:</ins></p>
+    <p style="color: rgba(210, 93, 194,1);padding-left: 4%;">
+        #block&lcub;<br>&emsp;text-align: center;<br>&emsp;color: cornflowerblue;<br>&rcub;
+    </p>
+    <li><b>CSS Class Selector:</b>The class selector selects HTML elements with a specific class attribute. It is
+        used with a period character . (full stop symbol) followed by the class name.
+        <p>Note: A class name should not be started with a number.</p>
+    </li>
+    <p><ins>For ex.:</ins></p>
+    <p style="color: rgba(210, 93, 194,1);padding-left: 4%;">
+        .block&lcub;<br>&emsp;text-align: center;<br>&emsp;color: cornflowerblue;<br>&rcub;
+    </p>
+    <li><b>CSS Universal Selector:</b>The universal selector is used as a wildcard character. It selects all the
+        elements on the pages.</li>
+    <p><ins>For ex.:</ins></p>
+    <p style="color: rgba(210, 93, 194,1);padding-left: 4%;">
+        *&lcub;<br>&emsp;margin: 0;<br>&emsp;padding: 0;<br>&emsp;box-sizing: border-box;<br>&rcub;
+    </p>
+    <li><b>CSS Group Selector:</b>The grouping selector is used to select all the elements with the same style
+        definitions. Grouping selector is used to minimize the code. Commas are used to separate each selector in
+        grouping.</li>
+    <p><ins>For ex.:</ins></p>
+    <p style="color: rgba(210, 93, 194,1);padding-left: 4%;">
+        h1,h2,p&lcub;<br>&emsp;text-align: center;<br>&emsp;color: cornflowerblue;<br>&rcub;
+    </p>
+</ol><br>
+
+<!-- Assignment Question-18 -->
+<p>
+<h2>What are the media types allowed by CSS?</h2>
+<p>Media types, as included in the first part of a query, were introduced in CSS2
+    as a way to target styles to particular media. For example, this @media rule
+    delivers a set of styles only when the document is printed</p>
+<p><ins>For ex.:</ins></p>
+<p style="color: rgba(210, 93, 194,1);padding-left: 4%;">
+    @media<b>print</b>&lcub;<br>&emsp;/* print-specific styles here */<br>&rcub;</p>
+<p>The most current defined media types are<b>all, print, screen, and speech.</b>If you are designing for screen,
+    the media type is optional.</p><br>
+
+<!-- Assignment Question-19 -->
+<p>
+<h2>What is the rule set?</h2>
+</p>
+</p>
+<p>A style sheet is made up of one or more style instructions (called style rules)
+    that describe how an element or group of elements should be displayed. Each rule selects an element and declares
+    how it should look. Basically, a<i><b>rule set</b></i>is made up of<b>Selector</b>and<b>Declaration-Block.</b>
+</p>
+<p>The following example contains two rules. The first makes all the h1 elements
+    in the document green; the second specifies that the paragraphs should be in
+    a large, sans-serif font.</p>
+<p><ins>For ex:</ins></p>
+<p style="color: rgba(210, 93, 194,1);padding-left: 4%;">
+    h1&lcub; color: green; &rcub;<br>p&lcub; font-size: large; font-family: sans-serif; &rcub;</p>
+
+</body>
+
+</html>

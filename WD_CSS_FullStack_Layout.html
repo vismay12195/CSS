@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WD-CSS-Full stack Assignment_Layout</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #252525;
+            font-family: 'Space Mono', monospace;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            background-color: #fecda5;
+            width: 1300px;
+            height: 680px;
+            margin: 1% auto;
+        }
+
+        .container .row1 {
+            display: flex;
+            justify-content: space-evenly;
+            width: 100%;
+        }
+
+        .container .row2 {
+            display: flex;
+            justify-content: space-evenly;
+            width: 100%;
+        }
+
+        .container .row1 .box,
+        .container .row2 .box {
+            width: 500px;
+            height: 325px;
+            background-color: #0f5152;
+            margin: 5px 10px;
+        }
+
+        .row1 .box:active {
+            transform-origin: center top;
+            scale: 2.045;
+            transition-timing-function: linear;
+            transition-duration: 1s;
+            padding: 0% 4%;
+            font-size: 0.6rem;
+        }
+
+        .row2 .box:active {
+            transform-origin: bottom center;
+            scale: 2.045;
+            transition-timing-function: linear;
+            transition-duration: 1s;
+            padding: 0% 4%;
+            font-size: 0.6rem;
+        }
+
+        .box img {
+            width: 100%;
+            max-height: 60%;
+            object-fit: cover;
+        }
+
+        .box p,
+        .box h4,
+        .box button,
+        .box span {
+            color: #fff;
+            line-height: 22px;
+        }
+
+        .box button {
+            background-color: #252525;
+            padding: 1% 5%;
+            margin-right: 2%;
+            font-size: 15px;
+            animation-name: animate;
+            /*This is used to give the color animation to the fonts of button*/
+            animation-timing-function: ease-in-out;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+        }
+
+        .box button:hover {
+            scale: 1.2;
+            animation-name: jump-shaking;
+            /*This is used to get the shaking animation effect when hover on the button for 5 times*/
+            animation-duration: 1s;
+            animation-timing-function: linear;
+            animation-iteration-count: 5;
+            transition-duration: 2s;
+            font-weight: 700;
+        }
+
+        @keyframes animate {
+            0% {
+                color: #fecda5;
+            }
+
+            50% {
+                color: #0f5152;
+            }
+
+            100% {
+                color: #fff;
+            }
+        }
+
+        @keyframes jump-shaking {
+            0% {
+                transform: translateX(0);
+            }
+
+            25% {
+                transform: translateY(-5px);
+            }
+
+            35% {
+                transform: translateY(-5px) rotate(17deg);
+            }
+
+            55% {
+                transform: translateY(-5px) rotate(-17deg);
+            }
+
+            65% {
+                transform: translateY(-5px) rotate(17deg);
+            }
+
+            75% {
+                transform: translateY(-5px) rotate(-17deg);
+            }
+
+            100% {
+                transform: translateY(0) rotate(0);
+            }
+        }
+
+        .container .box .order {
+            display: flex;
+            justify-content: space-between;
+            height: 10%;
+            padding: 0.5% 5% 0.5% 2%;
+        }
+
+        .box .order-l {
+            display: flex;
+            width: 80%;
+        }
+
+        @media screen and (max-width: 325px) {
+            .container {
+                width: 525px;
+                height: 100%;
+                background-color: #fecda5;
+            }
+
+            .container .row1,
+            .container .row2 {
+                flex-wrap: wrap;
+                flex-direction: column;
+            }
+
+            .row1 .box,
+            .row2 .box {
+                animation-name: tilt-n-move-shaking;
+                /*After 325px of width the box will have tilt and move shing animation effect for 1 time*/
+                animation-duration: 2s;
+                animation-iteration-count: 1;
+                animation-timing-function: ease-in-out;
+            }
+
+            .row1 .box:hover,
+            .row2 .box:hover {
+                transition-duration: 0.5s;
+                transform: perspective(300px) skew(-5deg, 5deg) translateX(14px);
+                /*This will give the photocapturing effect to the box with a top margin of 4%*/
+                transform-origin: center top;
+                scale: 0.95;
+                margin-top: 4%;
+                padding: 1% 1%;
+                font-size: 1rem;
+            }
+
+
+            @keyframes tilt-n-move-shaking {
+                0% {
+                    transform: translate(0, 0) rotate(0deg);
+                }
+
+                25% {
+                    transform: translate(5px, 5px) rotate(5deg);
+                }
+
+                50% {
+                    transform: translate(0, 0) rotate(0deg);
+                }
+
+                75% {
+                    transform: translate(-5px, 5px) rotate(-5deg);
+                }
+
+                100% {
+                    transform: translate(0, 0) rotate(0deg);
+                }
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Main section starts here -->
+    <div class="container">
+
+        <!-- Row1 starts here -->
+        <div class="row1">
+            <div class="box">
+                <img src="https://img.freepik.com/premium-photo/veg-samosa-is-crispy-spicy-indian-triangle-shape-snack-which-has-crisp-outer-layer-maida-filling-mashed-potato-peas-spices_466689-72931.jpg?size=626&ext=jpg&ga=GA1.2.1793118583.1685469555&semt=sph"
+                    alt="Samosa">
+                <p>
+                <h4>Samosa Platter - 2 per plate</h4>
+                </p>
+                <p>a fried South Asian pastry with a savoury filling, includes spiced potatoes, onions, peas,
+                    chillies and tamarind chutney </p>
+                <div class="order">
+                    <div class="order-l">
+                        <button>View</button>
+                        <button>Order Me</button>
+                    </div>
+                    <div class="order-r">
+                        <span>Rs.40/-</span>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <img src="https://img.freepik.com/free-photo/club-sandwich-with-side-french-fries_140725-1744.jpg?size=626&ext=jpg&ga=GA1.1.1793118583.1685469555&semt=sph"
+                    alt="Sandwich-fries">
+                <p>
+                <h4>Vegetable Sandwich with Fries</h4>
+                </p>
+                <p>Lip smacking cheesy grilled sandwich filled with cheese & freshly chopped veggies. Served with
+                    ketchup and dhaniya chutney </p>
+                <div class="order">
+                    <div class="order-l">
+                        <button>View</button>
+                        <button>Order Me</button>
+                    </div>
+                    <div class="order-r">
+                        <span>Rs.80/-</span>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <img src="https://img.freepik.com/free-photo/big-sandwich-hamburger-with-juicy-beef-burger-cheese-tomato-red-onion-wooden-table_2829-19631.jpg?size=626&ext=jpg&ga=GA1.1.1793118583.1685469555&semt=sph"
+                    alt="Burger-fries">
+                <p>
+                <h4>Veggie Burger with Fries</h4>
+                </p>
+                <p>The all time favorite burger prepared with a succulent vegetarian patty, special sauces, assorted
+                    fresh veggies </p>
+                <div class="order">
+                    <div class="order-l">
+                        <button>View</button>
+                        <button>Order Me</button>
+                    </div>
+                    <div class="order-r">
+                        <span>Rs.70/-</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Row1 ends here -->
+
+        <!-- Row2 starts here -->
+        <div class="row2">
+            <div class="box">
+                <img src="https://img.freepik.com/free-photo/top-view-delicious-noodles-concept_23-2148773774.jpg?size=626&ext=jpg&ga=GA1.1.1793118583.1685469555&semt=sph"
+                    alt="Noodles">
+                <p>
+                <h4>Hakka Noodles</h4>
+                </p>
+                <p>A popular Indian-Chinese dish made with stir-fried noodles and vegetables with soy sauce, vinegar,
+                    and chili sauce </p>
+                <div class="order">
+                    <div class="order-l">
+                        <button>View</button>
+                        <button>Order Me</button>
+                    </div>
+                    <div class="order-r">
+                        <span>Rs.100/-</span>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <img src="https://img.freepik.com/free-photo/penne-pasta-tomato-sauce-with-chicken-tomatoes-wooden-table_2829-19739.jpg?size=626&ext=jpg&ga=GA1.1.1793118583.1685469555&semt=sph"
+                    alt="Pasta">
+                <p>
+                <h4>Red Sauce Penne Pasta</h4>
+                </p>
+                <p>Fresh bruschetta tossed with penne pasta in a creamy garlic Red Rosee sauce. Finished with green
+                    onions </p>
+                <div class="order">
+                    <div class="order-l">
+                        <button>View</button>
+                        <button>Order Me</button>
+                    </div>
+                    <div class="order-r">
+                        <span>Rs.170/-</span>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <img src="https://img.freepik.com/premium-photo/sambar-vada-medu-vada-popular-south-indian-food-served-with-green-red-coconut-chutney-moody-background-selective-focus_466689-59620.jpg?size=626&ext=jpg&ga=GA1.1.1793118583.1685469555&semt=sph"
+                    alt="South-Indian">
+                <p>
+                <h4>Medu Wada - 4 per plate </h4>
+                </p>
+                <p>Its a must try South-Indian delicacy. Vada served with sambar, coconut and tomato-garlic chutney</p>
+                <div class="order">
+                    <div class="order-l">
+                        <button>View</button>
+                        <button>Order Me</button>
+                    </div>
+                    <div class="order-r">
+                        <span>Rs.90/-</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Row2 ends here -->
+
+    </div>
+    <!-- Main Section ends here -->
+
+</body>
+
+</html>
